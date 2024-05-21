@@ -1,0 +1,9 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: cb3d65c
+_src_path: https://github.com/esmith1729/ioc-template-windows.git
+description: ioc lakeshore
+git_platform: github.com
+github_org: esmith1729
+name: ioc-lakeshore340
+repo_uri: https://github.com/esmith1729/ioc-lakeshore340.git
+rtems: false
