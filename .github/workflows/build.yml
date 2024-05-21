@@ -63,6 +63,10 @@ jobs:
 
       - name: Ensure test script is executable
         run: chmod +x tests/run-tests.sh
+
+      - name: Ensure test script is executable
+        run: chmod +x /epics/ioc/start.sh
+
         
       - name: Test image
         # can't test non native without some hardware to run on
