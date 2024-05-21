@@ -61,6 +61,9 @@ jobs:
           tags: ci_test
           load: true
 
+      - name: Ensure test script is executable
+        run: chmod +x tests/run-tests.sh
+        
       - name: Test image
         # can't test non native without some hardware to run on
         if: ${{ matrix.epics-target == 'linux-x86_64' }}
