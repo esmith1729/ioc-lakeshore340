@@ -32,6 +32,10 @@ RUN iocStats/install.sh 3.2.0
 
 # get the ioc source and build it
 COPY ioc ${SOURCE_FOLDER}/ioc
+
+# Add execute permissions to the install.sh script
+RUN chmod +x ${SOURCE_FOLDER}/ioc/install.sh
+
 RUN cd ${IOC} && ./install.sh && make
 
 # install runtime proxy for non-native builds
@@ -53,4 +57,3 @@ COPY --from=runtime_prep /assets /
 RUN ibek support apt-install-runtime-packages --skip-non-native
 
 CMD "bash -c ${IOC}/start.sh"
-
